@@ -17,3 +17,38 @@ div {
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: "Aceh Soft";
+  src: url("./fonts/AcehSoft-Regular.otf");
+}
+
+@font-face {
+  font-family: "Aceh Soft Oblique";
+  src: url("./fonts/AcehSoft-Oblique.otf");
+}
+
+@font-face {
+  font-family: "Aceh Soft Medium";
+  src: url("./fonts/AcehSoft-Medium.otf");
+}
+
+@font-face {
+  font-family: "Aceh Soft Black";
+  src: url("./fonts/AcehSoft-Black.otf");
+}
+
+@font-face {
+  font-family: "Aceh Soft Black Oblique";
+  src: url("./fonts/AcehSoft-BlackOblique.otf");
+}
+
+@font-face {
+  font-family: "Aceh Soft Extra Bold";
+  src: url("./fonts/AcehSoft-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: "Aceh Soft Extra Bold Oblique";
+  src: url("./fonts/AcehSoft-ExtraBoldOblique.otf");
+}

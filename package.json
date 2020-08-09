@@ -10,14 +10,15 @@
   "keywords": [],
   "author": "<kit.masaracchia@gmail.com> (https://kitmas.com)",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/noblepaper/portfolio-2020"
+    "type": "git",
+    "url": "https://github.com/noblepaper/portfolio-2020"
   },
   "license": "ISC",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
