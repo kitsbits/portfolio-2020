@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { colors } from '../../theme';
-
 import landing from '../../content/landing.json';
+
+import LinkedIn from '../../components/svg/LinkedIn';
+import Github from '../../components/svg/Github';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -14,7 +16,22 @@ const Wrapper = styled.div`
 
 const Main = styled.div`
   background-color: ${colors.brand};
-  padding: 114px 114px;
+`;
+
+const ExternalNav = styled.ul`
+  padding: 47px 68px 0 29px;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Li = styled.li`
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+`;
+
+const TextWrapper = styled.article`
+  padding: 0 114px 114px;
 `;
 
 const Title = styled.h1`
@@ -30,6 +47,7 @@ const Description = styled.h3`
   font-family: 'Aceh Soft Medium';
   font-size: 38px;
   color: ${colors.highlight};
+  max-width: 1024px;
 `;
 
 const Nav = styled.nav`
@@ -51,13 +69,27 @@ const NavLink = styled(Link)`
 const IndexPage = () => (
   <Wrapper>
     <Main>
-      <Title>{landing.title}</Title>
-      <Description>
-        {landing.description[0]}
-        <br></br>
-        <br></br>
-        {landing.description[1]}
-      </Description>
+      <ExternalNav>
+        <Li>
+          <a href="https://www.linkedin.com/in/kitmasaracchia/" target="_blank">
+            <LinkedIn />
+          </a>
+        </Li>
+        <Li>
+          <a href="https://github.com/noblepaper" target="_blank">
+            <Github />
+          </a>
+        </Li>
+      </ExternalNav>
+      <TextWrapper>
+        <Title>{landing.title}</Title>
+        <Description>
+          {landing.description[0]}
+          <br></br>
+          <br></br>
+          {landing.description[1]}
+        </Description>
+      </TextWrapper>
     </Main>
     <Nav>
       <NavLink to="/recent-work">Recent Work</NavLink>

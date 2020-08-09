@@ -2,7 +2,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overscroll-behavior: none;
 }
 
 h1,
@@ -13,9 +12,19 @@ h5,
 h6,
 p,
 span,
-div {
+div,
+ul,
+li {
   margin: 0;
   padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 @font-face {
