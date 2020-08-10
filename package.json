@@ -4,7 +4,7 @@
   "description": "The portfolio site for Kit Masaracchia",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build ./src/index.html && node ./server/index.js",
     "start": "parcel ./src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +16,8 @@
   },
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
     "parcel-bundler": "^1.12.4",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
