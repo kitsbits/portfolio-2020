@@ -8,6 +8,8 @@ import landing from '../../content/landing.json';
 import LinkedIn from '../../components/svg/LinkedIn';
 import Github from '../../components/svg/Github';
 
+const flarSrc = require('../../content/images/flare_landing.png');
+
 const Wrapper = styled.div`
   height: 100vh;
   width: 100vw;
@@ -16,12 +18,14 @@ const Wrapper = styled.div`
 
 const Main = styled.div`
   background-color: ${colors.brand};
+  position: relative;
 `;
 
 const ExternalNav = styled.ul`
   padding: 47px 68px 0 29px;
   display: flex;
   justify-content: flex-end;
+  position: relative;
 `;
 
 const Li = styled.li`
@@ -41,6 +45,7 @@ const Title = styled.h1`
   color: ${colors.highlight};
   margin-bottom: 80px;
   max-width: 708px;
+  position: relative;
 `;
 
 const Description = styled.h3`
@@ -48,11 +53,13 @@ const Description = styled.h3`
   font-size: 38px;
   color: ${colors.highlight};
   max-width: 1024px;
+  position: relative;
 `;
 
 const Nav = styled.nav`
   padding: 50px;
   background-color: ${colors.background};
+  position: relative;
 `;
 
 const NavLink = styled(Link)`
@@ -66,9 +73,20 @@ const NavLink = styled(Link)`
   }
 `;
 
+const Flare = styled.img`
+  width: 55vw;
+  min-width: 375px;
+  max-width: 800px;
+  max-height: 95%;
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
+
 const IndexPage = () => (
   <Wrapper>
     <Main>
+      <Flare src={flarSrc} />
       <ExternalNav>
         <Li>
           <a href="https://www.linkedin.com/in/kitmasaracchia/" target="_blank">
