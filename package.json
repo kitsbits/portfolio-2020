@@ -4,6 +4,7 @@
   "description": "The portfolio site for Kit Masaracchia",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build ./src/index.html",
     "start": "parcel ./src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
