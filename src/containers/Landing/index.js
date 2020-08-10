@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { colors } from '../../theme';
@@ -8,7 +8,10 @@ import landing from '../../content/landing.json';
 import LinkedIn from '../../components/svg/LinkedIn';
 import Github from '../../components/svg/Github';
 
-const flarSrc = require('../../content/images/flare_landing.png');
+const flareSrc = require('../../content/images/flare_landing.png');
+const flareInner = require('../../content/images/flare_inner.png');
+// const flareMiddle = require('../../content/images/flare_middle.png');
+// const flareOuter = require('../../content/images/flare_outer.png');
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -73,6 +76,16 @@ const NavLink = styled(Link)`
   }
 `;
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
+
 const Flare = styled.img`
   width: 55vw;
   min-width: 375px;
@@ -81,12 +94,27 @@ const Flare = styled.img`
   position: absolute;
   top: 0;
   right: 0;
+  /* opacity: 0;
+  animation: ${fadeIn} 0.4s 0.35s ease-in-out forwards; */
 `;
+
+// const FlareInner = styled.img`
+//   width: 25vw;
+//   min-width: 175px;
+//   max-width: 300px;
+//   /* max-height: 45%; */
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   opacity: 0;
+//   animation: ${fadeIn} 0.4s 0.5s ease-in-out forwards;
+// `;
 
 const IndexPage = () => (
   <Wrapper>
     <Main>
-      <Flare src={flarSrc} />
+      <Flare src={flareSrc} />
+      {/* <FlareInner src={flareInner} /> */}
       <ExternalNav>
         <Li>
           <a href="https://www.linkedin.com/in/kitmasaracchia/" target="_blank">
